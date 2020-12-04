@@ -4,12 +4,24 @@
     "description": "blur your personal data with just one click",
     "manifest_version": 2,
 
+    "background": {
+        "scripts": [
+            "src/js/background.js"
+        ],
+        "persistent": "false"
+    },
     "browser_action": {
-        "default_popup": "blurify.html"
+        "default_popup": "src/blurify.html"
     },
     "permissions": [
+        "tabs",
         "activeTab",
         "http://*/*",
-        "https://*/*"
-    ]
+        "https://*/*",
+        "*://*/*"
+    ],
+    "web_accessible_resources": [
+        "src/js/*.js",
+        "src/expression.js"
+     ]
 }

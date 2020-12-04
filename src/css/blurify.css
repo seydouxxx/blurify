@@ -1,0 +1,32 @@
+body {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+div {
+    display: block;
+}
+#main {
+    align-items: stretch;
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    padding: 0;
+}
+
+#main_pic {
+    align-self: flex-start;
+    text-align: center;
+    max-width: 400px;
+    min-width: 20em;
+}
+
+#main_list {
+    min-width: 30em;
+    text-align: right;
+}
+
+#list-box > div {
+    display: flex;
+    justify-content: flex-end;
+}
