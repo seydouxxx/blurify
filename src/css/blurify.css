@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 body {
     padding: 0;
     margin: 0;
@@ -11,9 +14,18 @@ div {
 }
 #btn_focus, #btn_undo {
     display: block;
+    height: 100%;
+    width: 100%;
+}
+#div_type {
+    width: 100%;
+    text-align: left;
+
 }
 #content {
     cursor: pointer;
+    margin-right: 1rem;
+    width: 100%;
 }
 #main {
     align-items: stretch;
@@ -33,6 +45,15 @@ div {
 #main_list {
     min-width: 30em;
     text-align: right;
+}
+#list_elem {
+    margin-bottom: .1rem;
+}
+#list_elem[status="unchecked"] {
+    background-color: rgb(235,152,210);
+}
+#list_elem[status="checked"] {
+    background-color: darkseagreen;
 }
 #list-box {
     display: flex;
