@@ -6,6 +6,15 @@ body {
 div {
     display: block;
 }
+#logo_pic {
+    width: 200px;
+}
+#btn_focus, #btn_undo {
+    display: block;
+}
+#content {
+    cursor: pointer;
+}
 #main {
     align-items: stretch;
     display: flex;
@@ -25,8 +34,15 @@ div {
     min-width: 30em;
     text-align: right;
 }
-
-#list-box > div {
+#list-box {
     display: flex;
+    flex-direction: column;
+}
+#list-box > div {
+    display: inline-flex;
     justify-content: flex-end;
+    padding: 0.1em;
+}
+#list-box > div > div {
+    border: .1em;
 }
