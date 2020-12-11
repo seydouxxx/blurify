@@ -1,10 +1,11 @@
 'use strict'
 
+//  import regex from expression file
 import exps from '../expression.js';
 
 
 let strings = [];
-//  리스트 생성
+//  main function (call scanRegex -> makeListElem -> text_focus)
 const generateList = () => {
     initList();
 
@@ -18,6 +19,8 @@ const generateList = () => {
         });
     });
 };
+
+//  make html list to popup
 const makeListElem = (container, content) => {
     //  container div
     const table = container.appendChild(document.createElement('div'));
@@ -29,7 +32,6 @@ const makeListElem = (container, content) => {
     const div_isChecked = table.appendChild(document.createElement('div'));
     div_isChecked.setAttribute('id', 'div_type');
     const div_isCheckedText = div_isChecked.appendChild(document.createElement('span'));
-    // div_isCheckedText.setAttribute('id', 'type_text');
     div_isCheckedText.textContent = content[0];
 
     // _div for content
@@ -55,7 +57,8 @@ const makeListElem = (container, content) => {
     // // btn_focus.addEventListener("click", moveToText());
 };
 
-// in-browser function
+// * in-browser function
+//  scan current page with imported regex file
 const scanRegex = (regex) => {
 
     //  TODO: set precise target area
@@ -81,34 +84,17 @@ const scanRegex = (regex) => {
             });
         });
     }
-    // for (let field of targets) {
-    //     if (field.contentEditable) {
-    //         console.log("editable : " + field);
-    //         let textChunk = field.innerText ? field.innerText.split(/[ ,]+/) : null;
-    //         textChunk.map((chunk) => {
-    //             console.log(chunk);
-    //             Object.keys(regex).map((key) => {
-    //             for (let exp of regex[key]) {
-    //                 let result = [];
-    //                 let temp = chunk.match(exp);
-    //                 console.log(temp, exp);
-    //                 if (temp) {
-    //                     result.push(key); result.push(temp[0]);
-    //                     results.push(result);
-    //                 }
-    //             }
-    //             });
-    //         });
-    //     }
-    // }
     return results;
 };
 
 //  initialize list view
+// TODO for additional function
 const initList = () => {
     
 };
 
+// * in-browser function
+//  highlight strings
 const text_focus = (content) => {
     const backgroundColor = "yellow";
     document.designMode = "on";
@@ -122,7 +108,8 @@ const text_focus = (content) => {
     document.designMode = "off";
 };
 
-// TODO:
+// * in-browser function
+//  un-highlight strings
 const text_unfocus = (element) => {
     const backgroundColor = "transparent";
     document.designMode = "on";
@@ -136,7 +123,8 @@ const text_unfocus = (element) => {
     document.designMode = "off";
 };
 
-// TODO:
+// * in-browser function
+//  move scroll to highlighted string
 const moveToText = (content) => {
     const tags = document.getElementsByTagName("*");
     for (let tag of tags) {
@@ -146,7 +134,10 @@ const moveToText = (content) => {
     }
 };
 
+//  Event : when initialize main popup
 document.addEventListener('DOMContentLoaded', generateList());
+
+//  Event : when close popup (unfocus elems)
 window.onblur = () => {
     if (strings) {
         strings.forEach((element) => {
@@ -155,4 +146,5 @@ window.onblur = () => {
     }
     strings = [];
 };
-// onload -> found = scanExp(json) -> generateList(found)
+//  generateList -> scanRegex -> makeListElem -> text_focus
+//  moveToText -> text_unfocus
