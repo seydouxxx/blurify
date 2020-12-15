@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="css/blurify.css" type="text/css">
         <script type="module" src="expression.js"></script>
         <script type="module" src="js/background.js"></script>
+        <!-- <script type="module" src="js/imageProcess.js"></script> -->
     </head>
     <body>
         <div id="main">
@@ -14,7 +15,13 @@
                     <img id="logo_pic" src="images/blurify.png">
                 </div>
                 <div id="pic-panel">
-                    <h1>Blurify you data</h1>
+                    <div id="pic_dragzone" draggable="true">
+                        <form class="upload_form">
+                            <p>Drag images here</p>
+                            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+                            <label class="button" for="fileElem">Or choose file</label>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div id="main_list">

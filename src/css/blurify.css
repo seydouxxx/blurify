@@ -67,3 +67,9 @@ div {
 #list-box > div > div {
     border: .1em;
 }
+#pic_dragzone {
+
+}
+#pic_filename, #pic_size {
+    display: block;
+}

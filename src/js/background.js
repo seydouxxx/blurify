@@ -2,13 +2,13 @@
 
 //  import regex from expression file
 import exps from '../expression.js';
-
+import * as imageProcess from './imageProcess.js';
 
 let strings = [];
 //  main function (call scanRegex -> makeListElem -> text_focus)
 const generateList = () => {
     initList();
-
+    
     const list_box = document.getElementById('list-box');
 
     chrome.tabs.executeScript({ code: `(${scanRegex})(${JSON.stringify(exps)})` }, ([results]) => {
@@ -18,6 +18,39 @@ const generateList = () => {
             strings.push(result[1]);
         });
     });
+};
+
+const initImagePanel = () => {
+    const div_dragzone = document.getElementById('pic_dragzone');
+
+    div_dragzone.addEventListener('dragover', (ev) => {
+        ev = ev||event;
+        ev.preventDefault();
+    }, false);
+    div_dragzone.addEventListener('drop', (e) => {
+        e.preventDefault();
+
+        console.log(e.dataTransfer.files);
+
+        Array.from(e.dataTransfer.files).forEach((file) => {
+            const pic_panel = document.getElementById('pic-panel');
+            const pic_elem = pic_panel.appendChild(document.createElement('div'));
+            pic_elem.setAttribute('id', 'pic_elem');
+            
+            //  filename
+            const pic_filename = pic_elem.appendChild(document.createElement('span'));
+            pic_filename.textContent = file.name;
+            pic_filename.setAttribute('id', 'pic_filename');
+
+            //  filesize
+            const pic_size = pic_elem.appendChild(document.createElement('span'));
+            pic_size.textContent = Math.round(file.size/1024) + "kb";
+            pic_size.setAttribute('id', 'pic_size');
+
+            // thumbnail
+            makeThumbnail(file);
+        });
+    }, false);
 };
 
 //  make html list to popup
@@ -135,7 +168,7 @@ const moveToText = (content) => {
 };
 
 //  Event : when initialize main popup
-document.addEventListener('DOMContentLoaded', generateList());
+document.addEventListener('DOMContentLoaded', generateList(), initImagePanel());
 
 //  Event : when close popup (unfocus elems)
 window.onblur = () => {
