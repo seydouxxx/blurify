@@ -9,7 +9,7 @@ blurify는 포스팅 내용 자체 검열을 위한 크롬 확장 프로그램�
 
 ## ~사용방법~
 ### chrome
-~[크롬 확장 프로그램 스토어](https://chrome.google.com/webstore/category/extensions?_feature=google)에서 다운로드 하실 수 있습니다.~
+~[크롬 웹스토어](https://chrome.google.com/webstore/category/extensions?_feature=google)에서 다운로드 하실 수 있습니다.~
 
 
 ## 기여
