@@ -1,7 +1,7 @@
 # 기여하기
 
 ## 기여방법
-- 정규 표현식 추가
+- [정규 표현식 추가](https://github.com/seydouxxx/blurify/blob/main/CONTRIBUTING.md#%EC%A0%95%EA%B7%9C-%ED%91%9C%ED%98%84%EC%8B%9D-%EC%B6%94%EA%B0%80)
 - 
 
 ### 정규 표현식 추가
