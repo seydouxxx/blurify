@@ -1,8 +1,11 @@
 # 기여하기
 다양한 종류의 기여를 환영합니다.🎉
+- [디렉토리 구조](https://github.com/seydouxxx/blurify/blob/main/CONTRIBUTING.md#%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EA%B5%AC%EC%A1%B0)
 - [정규 표현식 추가](https://github.com/seydouxxx/blurify/blob/main/CONTRIBUTING.md#%EC%A0%95%EA%B7%9C-%ED%91%9C%ED%98%84%EC%8B%9D-%EC%B6%94%EA%B0%80)
 - [기능 추가](https://github.com/seydouxxx/blurify/blob/main/CONTRIBUTING.md#%EA%B8%B0%EB%8A%A5-%EC%B6%94%EA%B0%80)
 - [UI 수정](https://github.com/seydouxxx/blurify/blob/main/CONTRIBUTING.md#UI-%EC%88%98%EC%A0%95)
+
+## 디렉토리 구조
 
 ## 정규 표현식 추가
 - 본 확장 프로그램은 문자열 탐색에 [정규 표현식](https://ko.wikipedia.org/wiki/%EC%A0%95%EA%B7%9C_%ED%91%9C%ED%98%84%EC%8B%9D)을 사용합니다.
