@@ -1,8 +1,7 @@
 # 기여하기
-다양한 종류의 기여를 환영합니다.🎉
+모든 기여를 환영합니다.🎉
 - [정규 표현식 추가](https://github.com/seydouxxx/blurify/blob/main/CONTRIBUTING.md#%EC%A0%95%EA%B7%9C-%ED%91%9C%ED%98%84%EC%8B%9D-%EC%B6%94%EA%B0%80)
-- [기능 추가](https://github.com/seydouxxx/blurify/blob/main/CONTRIBUTING.md#%EA%B8%B0%EB%8A%A5-%EC%B6%94%EA%B0%80)
-- [UI 수정](https://github.com/seydouxxx/blurify/blob/main/CONTRIBUTING.md#UI-%EC%88%98%EC%A0%95)
+- [기능 추가 / UI 수정](https://github.com/seydouxxx/blurify/blob/main/CONTRIBUTING.md#%EA%B8%B0%EB%8A%A5-%EC%B6%94%EA%B0%80)
 - [디렉토리 구조](https://github.com/seydouxxx/blurify/blob/main/CONTRIBUTING.md#%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EA%B5%AC%EC%A1%B0)
 
 ## 정규 표현식 추가
@@ -19,10 +18,13 @@
 
 ### 테스트
 - PR 전 충분한 [테스트](https://regexr.com/)를 수행해 주세요.
-- 배포 단계에서는 문장 단위에서 탐색이 이루어지므로 표현식에 ^(시작 문자)나 $(끝 문자)를 사용해서는 안됩니다.
+- 배포 단계에서는 문장 단위로 탐색이 이루어지므로 표현식에 ^(시작 문자)나 $(끝 문자)를 사용해서는 안됩니다.
 
-## 기능 추가
-
-## UI 수정
+## 기능 추가 / UI 작업
+- ❗️[프로젝트 보드](https://github.com/seydouxxx/blurify/projects/1)를 먼저 확인해주세요.
+- 추가하고자 하는 기능이 프로젝트 보드의 TODO에 있다면 해당 내용으로 이슈를 생성해주세요.
+- 작업 전 [디렉토리 구조](https://github.com/seydouxxx/blurify/blob/main/CONTRIBUTING.md#%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EA%B5%AC%EC%A1%B0)를 먼저 확인해주세요.
 
 ## 디렉토리 구조
+- 루트 디렉토리 내의 [manifest.json](https://github.com/seydouxxx/blurify/blob/main/manifest.json)파일은 구글 확장 프로그램 설정을 저장하는 파일로, 새롭게 추가되는 스크립트 파일은 반드시 manifest 파일에 등록되어 있어야 합니다. 자세한 내용은 [구글 개발자 문서](https://developer.chrome.com/docs/extensions/)를 참조하세요.
+- 실제 동작과 관련된 파일들은 [src](https://github.com/seydouxxx/blurify/tree/main/src)파일 내에 저장되어 있습니다.
