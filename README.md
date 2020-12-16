@@ -12,3 +12,6 @@ blurify는 포스팅 내용 자체 검열을 위한 크롬 확장 프로그램�
 본 저장소에 기여하고 싶다면 [CONTRIBUTING.md](https://github.com/seydouxxx/blurify/blob/main/CONTRIBUTING.md)를 참고해 주세요.
 
 건의 및 버그 신고는 [이슈](https://github.com/seydouxxx/blurify/issues)로 등록 부탁드립니다.
+
+- - -
+by 이호준 (risk@kakao.com)
