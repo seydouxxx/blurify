@@ -4,7 +4,7 @@
 - [기능 추가](https://github.com/seydouxxx/blurify/blob/main/CONTRIBUTING.md#%EA%B8%B0%EB%8A%A5-%EC%B6%94%EA%B0%80)
 
 ## 정규 표현식 추가
-- 본 확장 프로그램은 문자열 탐색에 정규 표현식을 사용합니다.
+- 본 확장 프로그램은 문자열 탐색에 [정규 표현식](https://ko.wikipedia.org/wiki/%EC%A0%95%EA%B7%9C_%ED%91%9C%ED%98%84%EC%8B%9D)을 사용합니다.
 - 필터링 성능 향상을 위해 지속적인 표현식 추가가 필요합니다.
 - 등록된 표현식들은 디렉토리 내 [expression.js](https://github.com/seydouxxx/blurify/blob/main/src/expression.js) 파일에 [json](https://www.json.org/json-ko.html) 형식으로 저장되어 있습니다.
   - 정규 표현식만 추가하실 경우, 디렉토리 내 다른 파일들을 수정하실 필요는 없습니다.
