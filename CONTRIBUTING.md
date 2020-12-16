@@ -2,6 +2,7 @@
 다양한 종류의 기여를 환영합니다.🎉
 - [정규 표현식 추가](https://github.com/seydouxxx/blurify/blob/main/CONTRIBUTING.md#%EC%A0%95%EA%B7%9C-%ED%91%9C%ED%98%84%EC%8B%9D-%EC%B6%94%EA%B0%80)
 - [기능 추가](https://github.com/seydouxxx/blurify/blob/main/CONTRIBUTING.md#%EA%B8%B0%EB%8A%A5-%EC%B6%94%EA%B0%80)
+- [UI 수정](https://github.com/seydouxxx/blurify/blob/main/CONTRIBUTING.md#UI-%EC%88%98%EC%A0%95)
 
 ## 정규 표현식 추가
 - 본 확장 프로그램은 문자열 탐색에 [정규 표현식](https://ko.wikipedia.org/wiki/%EC%A0%95%EA%B7%9C_%ED%91%9C%ED%98%84%EC%8B%9D)을 사용합니다.
@@ -20,3 +21,5 @@
 - 배포 단계에서는 문장 단위에서 탐색이 이루어지므로 표현식에 ^(시작 문자)나 $(끝 문자)를 사용해서는 안됩니다.
 
 ## 기능 추가
+
+## UI 수정
